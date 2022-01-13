@@ -26,7 +26,6 @@ class Linear_Regression():
     
     def update_weights(self,):
         Y_prediction = self.predict(self.X)
-        print(Y_prediction)
         dw = - (2* (self.X.T).dot(self.Y-Y_prediction))/self.m
         db = - 2 * np.sum(self.Y-Y_prediction)/self.m
 
@@ -50,6 +49,7 @@ model.fit(X_train, Y_train)
 
 print(model.w[0])
 print(model.b)
+print("Ola mundo")
 
 test_data_prediction = model.predict(X_test)
 print(test_data_prediction)
